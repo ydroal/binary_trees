@@ -1,7 +1,7 @@
 # C - Binary trees
 
 Binary Tree is a special datastructure used for data storage purposes.  
-A binary tree has a special condition that each node can have a maximum of two children.
+A binary tree has a special condition that each node can have a maximum of two children.  
 And It has the benefits of both an ordered array and a linked list as search 
 is as quick as in a sorted array and insertion or deletion operation are as fast as in linked list.
 We are learning this datastructure in C.  
@@ -11,10 +11,10 @@ We are learning this datastructure in C.
 * All files were compiled on Ubuntu 20.04 LTS using gcc,  using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 * This code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
 
-##General
+## General
 
 - What is a binary tree
-	One of a type of data structure in which each node has at most two children.
+	One of a type of data structure in which each node has at most two children.  
 	A binary tree is typically used for efficient searching, insertion, and deletion operations.
 
 - What is the difference between a binary tree and a Binary Search Tree
@@ -35,16 +35,16 @@ We are learning this datastructure in C.
 	O(log n), in the worst case. a well-balanced BST will have much better performance 
 	than an unordered linked list.
 
-- What are the depth, the height, the size of a binary tree
-	__depth__ : the number of edges from the root to specific node.
-		    (not necessarily to the leaf node) 
-	__height__: the number of edges on the longest path from the root to a leaf.
+- What are the depth, the height, the size of a binary tree  
+	__depth__ : the number of edges from the root to specific node.  
+		    (not necessarily to the leaf node)  
+	__height__: the number of edges on the longest path from the root to a leaf.  
 	__size___: number of nodes in the tree
 
 
 ## Data Structure and types for binary trees
 
-###Basic Binary Tree
+### Basic Binary Tree
 ```
 /**
  * struct binary_tree_s - Binary tree node
@@ -65,17 +65,17 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 ```
 
-###Binary Search Tree
+### Binary Search Tree
 ```
 typedef struct binary_tree_s bst_t;
 ```
 
-###AVL Tree
+### AVL Tree
 ```
 typedef struct binary_tree_s avl_t;
 ```
 
-###Max Binary Heap
+### Max Binary Heap
 ```
 typedef struct binary_tree_s heap_t;
 ```
