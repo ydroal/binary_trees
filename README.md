@@ -13,11 +13,13 @@ We are learning this datastructure in C.
 
 ## General
 
-- What is a binary tree
+- What is a binary tree  
+
 	One of a type of data structure in which each node has at most two children.  
 	A binary tree is typically used for efficient searching, insertion, and deletion operations.
 
-- What is the difference between a binary tree and a Binary Search Tree
+- What is the difference between a binary tree and a Binary Search Tree  
+
 	A binary tree is a tree data structure and a Binary Search Tree (BST) is 
 	a specific type of binary tree that has the property that for each node, 
 	all the elements in its left subtree are less than the node, and 
@@ -26,7 +28,8 @@ We are learning this datastructure in C.
 	We can say  that a binary tree is a general concept, while a Binary Search Tree is
 	a specific type of binary tree that has a specific ordering property. 
 
-- What is the possible gain in terms of time complexity compared to linked lists
+- What is the possible gain in terms of time complexity compared to linked lists  
+
 	Searching for an element in a linked list requires traversing the list from the beginning, 
 	which takes linear time, O(n), in the worst case.
 	A binary search tree is a more efficient data structure for searching,
@@ -36,11 +39,31 @@ We are learning this datastructure in C.
 	than an unordered linked list.
 
 - What are the depth, the height, the size of a binary tree  
-	__depth__ : the number of edges from the root to specific node.  
+	__depth__: the number of edges from the root to specific node.  
 		    (not necessarily to the leaf node)  
 	__height__: the number of edges on the longest path from the root to a leaf.  
 	__size___: number of nodes in the tree
 
+- What are the different traversal methods to go through a binary tree  
+	
+	There are three main ways to traverse a binary tree: in-order, pre-order, and post-order.  
+	__In-order traversal__: visits the left subtree, then the root, and finally the right subtree.  
+	__Pre-order traversal__: visits the root, then the left subtree, and finally the right subtree.  
+	__Post-order traversal__: visits the left subtree, then the right subtree, and finally the root.  
+	
+	Each method will visit each node in the tree, but in a different order, thus visiting  
+	the left and right subtrees in different sequence.
+
+- What is a complete, a full, a perfect, a balanced binary tree  
+
+	__complete binary tree__: every level, except the last level, is completely filled and  
+				  all nodes are as far left as possible.  
+	__full binar tree__: every node has either 0 or 2 children.  
+			    (In other words, every node except leaf nodes has two children)
+	__perfect binary tree__: a full binary tree in which all leaf nodes are at the same level.  
+	__balanced binary tree__: height of the left and right subtrees of every node differ by at most 1.  
+
+	![complete_binary_tree](https://user-images.githubusercontent.com/62082691/212327735-559c7b65-af67-4fa5-96c5-544bc5e65473.jpg)
 
 ## Data Structure and types for binary trees
 
@@ -103,26 +126,32 @@ File: 3-binary_tree_delete.c
 
 __4. Write a function that checks if a node is a leaf__ 
 
+Note: if a node has no children.(if (node->left == NULL && node->right == NULL))
 File: 4-binary_tree_is_leaf.c
 
 __5. Write a function that checks if a given node is a root__
 
+Note: if a givenm node has parent. (if (node->parent == NULL))
 File: 5-binary_tree_is_root.c
 
 __6. Write a function that goes through a binary tree using pre-order traversal__.
 
+Note: root - Left Subtree - Right Subtree
 File: 6-binary_tree_preorder.c
 
 __7. Write a function that goes through a binary tree using in-order traversal__
 
+Note: Left Subtree - root - Right Subtree
 File: 7-binary_tree_inorder.c
 
 __8. Write a function that goes through a binary tree using post-order traversal__
 
+Note: Left Subtree - Right Subtree - root
 File: 8-binary_tree_postorder.c
 
 __9. Write a function that measures the height of a binary tree__.
 
+Note: should return 0 as the height of a leaf node is always 0. 
 File: 9-binary_tree_height.c
 
 __10. Write a function that measures the depth of a node in a binary tree__
