@@ -50,16 +50,12 @@ We are learning this datastructure in C.
 	__In-order traversal__: visits the left subtree, then the root, and finally the right subtree.  
 	__Pre-order traversal__: visits the root, then the left subtree, and finally the right subtree.  
 	__Post-order traversal__: visits the left subtree, then the right subtree, and finally the root.  
-	
-	Each method will visit each node in the tree, but in a different order, thus visiting  
-	the left and right subtrees in different sequence.
-
 - What is a complete, a full, a perfect, a balanced binary tree  
 
 	__complete binary tree__: every level, except the last level, is completely filled and  
 				  all nodes are as far left as possible.  
 	__full binar tree__: every node has either 0 or 2 children.  
-			    (In other words, every node except leaf nodes has two children)
+			    (In other words, every node except leaf nodes has two children)  
 	__perfect binary tree__: a full binary tree in which all leaf nodes are at the same level.  
 	__balanced binary tree__: height of the left and right subtrees of every node differ by at most 1.  
 
@@ -126,7 +122,7 @@ File: 3-binary_tree_delete.c
 
 __4. Write a function that checks if a node is a leaf__ 
 
-Note: if a node has no children.(if (node->left == NULL && node->right == NULL))
+Note: if a node has no children.(if (node->left == NULL && node->right == NULL))  
 File: 4-binary_tree_is_leaf.c
 
 __5. Write a function that checks if a given node is a root__
